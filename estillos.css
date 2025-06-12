@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box; /*La box-sizingpropiedad CSS nos permite incluir el relleno y el borde en el ancho y alto total de un elemento*/
+}
+
+#contenedor{
+        border:1px solid white;   /* Borde que indica los limites del todo el contenedor*/
+}
+
+body{
+	      background-image: url("img/the-rock-rock-meme.gif"); /* Imagen de fondo para el cuerpo del documento html*/
+
+}
+
+#cabecera {  /*estilos a la cabecera del documento utilizando el id definido en el div correspondiente a esta sección*/
+        background-color:hsla(0.1turn,100%,50%,0.5); /* color de fondo de la cabecera, de colores con transparencias que pueden variar según 
+		se requiera, azul
+		Los valores de color HSLA son una extensión de los valores de color HSL con un canal alfa, que especifica la opacidad del color.*/
+		padding:30px;
+	    text-align:center;	
+	}
+	
+	 #imglogo{ /* logo */
+		max-width:10%; /*propiedad, define el ancho máximo que un elemento puede tener*/
+		width:auto; /* propiedad width css establece el ancho de un elemento. Auto - Valor por defecto. El navegador calcula el ancho*/
+		height:auto; /* propiedad height css establece la altura de un elemento*/
+		float:left;  /* Mantiene la imagen flotando a la izquierda*/
+	}
+	
+	
+#alinear{
+display: flex;
+}
+
+#ss {
+	overflow:auto;   /*´propiedad css especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el 
+	contenido excedente en un elemento a nivel de bloque.Depende del agente de usuario. Navegadores de escritorio como Firefox proveen barras de 
+	desplazamiento si hay contenido excedente. */
+ }
+
+.izquierdo {
+	float:left; /* Propiedad flotante css, especifica cómo debe flotar un elemento*/
+    width:20%; /*Ancho sección menu*/
+    text-align:center; /*Alineación del text*/
+    padding:0 20px; /* Relleno */
+	background-color:hsla(0.3turn,100%,50%,0.5); /*color morado con opacidad hsla*/
+	height:100%; /*Altura */
+	margin-top:7px; /*propiedad que establece el margen superior de un elemento especificando una longitud o un porcentaje*/
+	 	 
+}
+
+.izquierdo a {
+      background-color:hsla(0.8turn,100%,50%,0.5);  /*Color en link de menú*/
+	  padding:8px; /*Relleno del link que da efecto de botones */
+	  margin-top:2px; /* Margen entre un link  y otro*/
+	  display:block; /*Pantalla valor de bloque*/
+	  width:100%; /* anchura en relleno de los link*/
+	  color:white; /* Color del link*/
+	  font-weight: bold;
+	  text-align:center; 
+	  text-decoration:none; /* sin la linea que caracteriza un enlace*/
+}
+
+
+  .izquierdo a:hover{ /*Efecto hover para menus al seleccionar*/
+		background-color:hsla(0.6turn,100%,50%,0.2);  /* El efecto hover hace que al seleccionar con el puntero 
+		cualquiera de los link, se torne de otro color al establecido en el relleno*/
+		}
+	 
+	 
+   .cuerpo { /* estilos al contenido central de la página*/
+	 height:100%; /* altura */
+	 margin-top:7px; /*Margen superior*/
+	 float:left; /* permite al elemento main flotar en una posicion*/
+	 width:60%; /* anchura del elemento */
+	 padding:0 20px; /* relleno */
+	 background-color:hsla(0.9turn,100%,50%,0.4); /* Color con trasnparencias/opacidad*/
+}
+
+	.derecho {
+	  background-color:hsla(0.3turn,100%,50%,0.4); /* Color con trasnparencias/opacidad*/
+	  float:left; /* permite al elemento flotar en una posicion*/
+	  width:20%; /* anchura del elemento */
+	  height: 100%;/* altura */
+	  padding:15px; /* relleno */
+	  margin-top:7px; /*Margen superior*/
+	  text-align:center; /*Alineacion de texto al centro*/
+}
+
+	@media only screen and (max-width:620px) { /*consulta de medios especificando aplicar condiciones a la pantalla , en este caso 
+	un ancho máximo de 620px para adaptarse y no se distorsionen los elementos que hay en ella*/
+	  .menu, .main, .right {   /* se consideran los divs que hacen la función para maquetar nuestra página, utilizando las clases .menu, .main, .right 
+	  que seran ordenados y adaptados a la pantalla */
+		width:100%;
+	  }
+	}
+
+	.pie{ /* pie de página */
+    background-color:hsla(0.8turn,100%,50%,0.5); 
+	text-align:center;
+	padding:10px;
+	margin-top:7px;
+	}
+
+
+	h1{ /*Elemento de encabezado, que hace enfasis en el titulo de la página, el más importante va de h1 hasta h6 que es el menos importante por asi decirlo 
+	h1, h2, h3, h4, h5, h6.*/
+		
+		font-weight: bolder;  /*Es el peso de la fuente, es decir el grosor del texto*/
+		font-size: 50;  /* Define el tamaño de la fuente*/
+        color:hsla(0.8turn,100%,100%,0.8);  /* Color proporcionado al titulo de encabezado, blanco con opacidad hsla*/
+}
+
+
+p{
+    	font-weight: bold;
+		font-size: 20;
+		text-align: justify; /*Define la alineación del texto, en este caso justificado*/
+}
+
+video{ /* estilo al video*/ 
+	
+	max-width:95%; /* propiedad que define el ancho maximo del video*/
+
+	
+}
+
+table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
+  border: 7px solid blue; /*Bordes  con un grosor de 7px, con un color solido azul*/
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrap {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  padding-bottom: 20px;
+}
+
+.game {
+	transform-style: preserve-3d;
+	perspective: 500px;
+	min-height: 100%;
+  height: 100%;
+}
+
+@mixin width($max){
+	@media (max-width: $max){
+		@content;
+	}
+}
+
+@keyframes matchAnim {
+	0% {
+		background: #bcffcc;
+	}
+	100% {
+		background: white;
+	}
+}
+
+.card {
+  float: left;
+  width: 16.66666%;
+  height: 25%;
+  padding: 5px;
+  text-align: center;
+	display: block;
+	perspective: 500px;
+	position: relative;
+	cursor: pointer;
+  z-index: 50; 
+	-webkit-tap-highlight-color: rgba(0,0,0,0);  
+	@include width(800px){
+		width: 25%;
+		height: 16.666%;
+	}
+	.inside {
+		width: 100%;
+		height: 100%;
+		display: block;
+		transform-style: preserve-3d;
+		transition: .4s ease-in-out;
+		background: white;
+
+		&.picked, &.matched {
+			transform: rotateY(180deg);
+		}
+		&.matched {
+			animation: 1s matchAnim ease-in-out;
+			animation-delay: .4s;
+		}
+	}
+
+  .front, .back {
+  	border: 1px solid black;
+  	backface-visibility: hidden;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	padding: 20px;
+
+  	img {
+  		max-width: 100%;
+  		display: block;
+  		margin: 0 auto;
+  		max-height: 100%;
+  	}
+  }
+  .front {
+  	transform: rotateY(-180deg);
+  	@include width(800px){
+  		padding: 5px;
+  	}
+  }
+  .back{
+		transform: rotateX(0); // fix firefox backface-visibility.
+		@include width(800px){
+  		padding: 10px;
+  	}
+  }
+}
+
+.modal-overlay {
+	display: none;
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal {
+	display: none;
+	position: relative;
+	width: 500px;
+	height: 400px;
+	max-height: 90%;
+	max-width: 90%;
+	min-height: 380px;
+	margin: 0 auto;
+	background: white;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 30px 10px;
+	.winner {
+		font-size: 80px;
+		text-align: center;
+		font-family: "Anton", sans-serif;
+		color: #4d4d4d;
+		text-shadow: 0px 3px 0 black;
+		@include width(480px){
+			font-size: 60px;
+		}
+	}
+	.restart {
+		font-family: "Anton", sans-serif;
+		margin: 30px auto;
+		padding: 20px 30px;
+		display: block;
+		font-size: 30px;
+		border: none;
+		background: #4d4d4d;
+		background: linear-gradient(#4d4d4d, #222);
+		border: 1px solid #222;
+		border-radius: 5px;
+		color: white;
+		text-shadow: 0px 1px 0 black;
+		cursor: pointer;
+		&:hover {
+			background: linear-gradient(#222, black);
+		}
+	}
+	.message {
+		text-align: center;
+		a {
+			text-decoration: none;
+			color: #28afe6;
+			font-weight: bold;
+			&:hover {
+				$c: lighten(#28afe6, 10%);
+				color: $c;
+				border-bottom: 1px dotted $c;
+			}
+		}
+	}
+	.share-text {
+		text-align: center;
+		margin: 10px auto;
+	}
+	.social {
+		margin: 20px auto;
+		text-align: center;
+		li {
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				display: block;
+				line-height: 50px;
+				font-size: 20px;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				&.facebook {
+					background: #3b5998;
+					&:hover {
+						background: lighten(#3b5998, 10%);
+					}
+				}
+				&.google {
+					background: #D34836;
+					&:hover {
+						background: lighten(#D34836, 10%);
+					}
+				}
+				&.twitter {
+					background: #4099FF;
+					&:hover {
+						background: lighten(#4099FF, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+	.disclaimer {
+		line-height: 20px;
+		font-size: 12px;
+		color: #727272;
+		text-align: center;
+		@include width(767px){
+			font-size: 8px;
+		}
+	}
+}
