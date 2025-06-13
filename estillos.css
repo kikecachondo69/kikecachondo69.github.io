@@ -129,7 +129,16 @@ table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
   
 }
 
+table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
+  border: 1px solid black; /*Bordes  con un grosor de 7px, con un color solido azul*/
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.class1{
+		width:325px; 
+		height:250px;
+}
 
 
 
@@ -355,4 +364,27 @@ table, th, td {  /* estilo a la tabla creada en la pagina galeria.html*/
 			font-size: 8px;
 		}
 	}
+}
+
+.img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.facebook{
+	height:30px;
+	weight:30px;
+	display:inline;
+}
+.img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.instagram{
+	height:30px;
+	weight:30px;
+	display:inline;
 }
